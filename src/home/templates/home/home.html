@@ -1,0 +1,302 @@
+{% extends 'shared/_layout.html' %}
+{% block title %}صفحه اصلی  |  آرکا{% endblock %}
+{% block content %}
+    <section class="se-pre-con"></section>
+    <section class="name-of-site">
+        <h3>با <b>آرکا</b> از خبرهای تمام بازارهای مالی داخلی و خارجی باخبر باشید</h3>
+    </section>
+    <section class="bloomberg-address">
+        <a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a>
+    </section>
+    <section class="total-of-market">
+        <canvas id="canvas" class=""></canvas>
+        <section class="total-of-market-container d-flex justify-content-around">
+            <section>
+                <h2 onclick="forexFunc()">فارکس</h2>
+                <a href="{% url 'forex_news_page' %}">خبرها</a>
+            </section>
+            <section>
+                <h2 onclick="digitalCurrencyFunc()">کریپتو</h2>
+                <a href="{% url 'crypto_news_page' %}">خبرها</a>
+            </section>
+            <section>
+                <h2 onclick="bourseFunc()">بورس</h2>
+                <a href="{% url 'bourse_news_page' %}">خبرها</a>
+            </section>
+        </section>
+    </section>
+    <section class="main-body d-flex">
+        <section id="digital-currency"></section>
+        <section class="news-body">
+            <section>
+                <section class="d-flex justify-content-end">
+                    <h1>تازه ترین های <b>کریپتو</b></h1>
+                </section>
+                <section class="news-container d-flex justify-content-between">
+                    {% for crypto_news in new_crypto_news %}
+                        <section class="market-news">
+                            <a href="https://www.coindesk.com/{{ crypto_news.url_news }}">
+                                <section>
+                                    <section><img src="{{ crypto_news.img_news }}" alt="CriptoNews">
+                                    </section>
+                                </section>
+                                <section>
+                                    <p>{{ crypto_news.title_news }}</p>
+                                </section>
+                            </a>
+                        </section>
+                    {% endfor %}
+
+                </section>
+                <section class="more-news d-flex justify-content-end">
+                    <a target="_blank" href="{% url 'crypto_news_page' %}">< نمایش همه خبرها</a>
+                </section>
+            </section>
+            <section>
+                <h1>قیمت ارزهای دیجیتال امروز</h1>
+                <section class="table-of-price">
+                    <section>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>24h %</th>
+                                <th class="chart-table">chart (24h)</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="name-price d-flex justify-content-center">
+                                        <img class="price-icon" src="../../../static/images/BTC-icon.svg" alt="BTC">
+                                        <p>BTC</p>
+                                    </section>
+                                </td>
+                                <td id="btc-price">100000000</td>
+                                <td id="btc-24h">2.84%</td>
+                                <td>
+                                    <img
+                                            id="btc-chart"
+                                            class="chart"
+                                            src="../../../static/images/chart-img.svg"
+                                            alt="WeekChart">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="name-price d-flex justify-content-center">
+                                        <img class="price-icon"
+                                             src="../../../static/images/coin_logo/ethereum-eth-logo.svg" alt="BTC">
+                                        <p>ETH</p>
+                                    </section>
+                                </td>
+                                <td id="eth-price">100000000</td>
+                                <td id="eth-24h">2.84%</td>
+                                <td>
+                                    <img
+                                            id="eth-chart"
+                                            class="chart"
+                                            src="../../../static/images/chart-img.svg"
+                                            alt="WeekChart">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <section class="name-price d-flex justify-content-center">
+                                        <img class="price-icon" src="../../../static/images/coin_logo/usdt.svg"
+                                             alt="BTC">
+                                        <p>USDT</p>
+                                    </section>
+                                </td>
+                                <td id="usdt-price">100000000</td>
+                                <td id="usdt-24h">2.84%</td>
+                                <td>
+                                    <img
+                                            id="usdt-chart"
+                                            class="chart"
+                                            src="../../../static/images/chart-img.svg"
+                                            alt="WeekChart">
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section class="more-news d-flex justify-content-end">
+                    <a href="{% url 'crypto_prices_page' %}">< نمایش بیشتر</a>
+                    <section id="forex"></section>
+                </section>
+            </section>
+            <section>
+                <h1>قیمت بازار فارکس امروز</h1>
+                <section class="table-of-price">
+                    <section>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>EUR / USD</td>
+                                <td>{{ forex_prices1.price}}</td>
+                                <td>GBP / USD</td>
+                                <td>{{ forex_prices2.price }}</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+                <section id="bourse"></section>
+                <section class="more-news d-flex justify-content-end">
+                    <a href="{% url 'forex_prices_page' %}">< نمایش بیشتر</a>
+                </section>
+            </section>
+            <section>
+                <section class="d-flex justify-content-end">
+                    <h1>تازه ترین های <b>بورس ایران</b></h1>
+                </section>
+                <section class="news-container new_brs_news d-flex justify-content-between">
+                    {% for brs_news in new_brs_news %}
+                        <section class="market-news">
+                            <a href="https://www.sena.ir/{{ brs_news.url_news }}">
+                                <section>
+                                    <section><img src="{{ brs_news.img_news }}" alt="CriptoNews">
+                                    </section>
+                                </section>
+                                <section>
+                                    <p>{{ brs_news.title_news }}</p>
+                                </section>
+                            </a>
+                        </section>
+                    {% endfor %}
+
+                </section>
+                <section class="more-news d-flex justify-content-end">
+                    <a target="_blank" href="{% url 'bourse_news_page' %}">< نمایش همه خبرها</a>
+                </section>
+            </section>
+            <section>
+                <h1>بازار نقدی بورس ایران</h1>
+                <section class="table-of-price">
+                    <section class="table-of-brs-price">
+                        <table>
+                            <tr>
+                                <th>ارزش بازار</th>
+                                <th>ارزش معاملات</th>
+                                <th>حجم معاملات</th>
+                                <th>شاخص كل (هم وزن)</th>
+                                <th>شاخص کل</th>
+                            </tr>
+                            <tr>
+                                <td id="brs-market-value">100000000</td>
+                                <td id="brs-trade-value">100000000</td>
+                                <td id="brs-trade-volume">100000000</td>
+                                <td id="brs-index-h">100000000</td>
+                                <td id="brs-index">2.84%</td>
+                            </tr>
+                        </table>
+                    </section>
+
+                </section>
+                <section class="more-news d-flex justify-content-end">
+                    <a href="{% url 'bourse_prices_page' %}">< نمایش بیشتر</a>
+                </section>
+            </section>
+        </section>
+        <section class="sidebar most-view">
+            <section class="most-visited-news">
+                <h4>آخرین خبر ها</h4>
+                <section class="title-of-most-news last-news-main">
+                    <section class="new-one">
+                        <a href="https://www.sena.ir/{{ last_brs_news.url_news }}" class="d-flex">
+                            <img src="{{ last_brs_news.img_news }}" alt="last-news">
+                            <h5>{{ last_brs_news.title_news }}</h5>
+                        </a>
+                    </section>
+                    <section class="new-two">
+                        <a href="https://www.coindesk.com{{ last_crypto_news.url_news }}" class="d-flex">
+                            <img src="{{ last_crypto_news.img_news }}" alt="last-news">
+                            <h5>{{ last_crypto_news.title_news }}</h5>
+                        </a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="most-visited-news mt-5">
+                <h4>پربازدیدترین خبر ها</h4>
+                <section class="title-of-most-news">
+                    <section class="new-one">
+                        <a href="#" class="d-flex">
+                            <img src="../../../static/images/comming-soon.png" alt="">
+                            <h5>به زودی</h5>
+                        </a>
+                    </section>
+                    <section class="new-two">
+                        <a href="#" class="d-flex">
+                            <img src="../../../static/images/comming-soon.png" alt="">
+                            <h5>به زودی</h5>
+                        </a>
+                    </section>
+                    <section class="new-three">
+                        <a href="#" class="d-flex">
+                            <img src="../../../static/images/comming-soon.png" alt="">
+                            <h5>به زودی</h5>
+                        </a>
+                    </section>
+                    <section class="new-four">
+                        <a href="#" class="d-flex">
+                            <img src="../../../static/images/comming-soon.png" alt="">
+                            <h5>به زودی</h5>
+                        </a>
+                    </section>
+                    <section class="new-five">
+                        <a href="#" class="d-flex">
+                            <img src="../../../static/images/comming-soon.png" alt="">
+                            <h5>به زودی</h5>
+                        </a>
+                    </section>
+                </section>
+            </section>
+            <section class="most-visited-news mt-5">
+                <h4>اطلاعیه های مهم</h4>
+                <section class="title-of-most-news title-of-notifs-main">
+                    {% for notif in notifs %}
+                        <section class="new-{{ forloop.counter }} justify-content-end pointer">
+                            <h3><a href="{% url 'notifs_page' %}">{{ notif.title }}</a></h3>
+                        </section>
+                    {% endfor %}
+                </section>
+            </section>
+        </section>
+
+    </section>
+
+
+    <section class="why-arka">
+        <h3>چرا از آرکا استفاده کنیم؟</h3>
+        <section class="reason-qs d-flex justify-content-around">
+            <section class="reason-ans">
+                <i class="fa fa-line-chart	"></i>
+                <h5>عنوان</h5>
+                <p>توضیح مختصر</p>
+            </section>
+            <section class="reason-ans">
+                <i class="fa fa-line-chart	"></i>
+                <h5>عنوان</h5>
+                <p>توضیح مختصر</p>
+            </section>
+            <section class="reason-ans">
+                <i class="fa fa-line-chart	"></i>
+                <h5>عنوان</h5>
+                <p>توضیح مختصر</p>
+            </section>
+            <section class="reason-ans">
+                <i class="fa fa-line-chart	"></i>
+                <h5>عنوان</h5>
+                <p>توضیح مختصر</p>
+            </section>
+        </section>
+    </section>
+{% endblock %}
+{% block footer_references %}
+    <script src="../../../static/js/home.js"></script>
+    <script src="../../../static/js/WsHome.js"></script>
+{% endblock %}

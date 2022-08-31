@@ -1,0 +1,40 @@
+{% extends 'shared/_layout.html' %}
+{% load thumbnail %}
+{% block title %}
+اطلاعیه ها
+{% endblock %}
+{% block content %}
+    <section class="se-pre-con"></section>
+    <section>
+        <section class="notif-us">
+            <section class="header-of-notif">
+                <section>
+                    <h1>اطلاعیه ها</h1>
+                </section>
+            </section>
+
+            <section class="main-body-notif">
+                {% for notification in notifications %}
+                    <section class="d-flex justify-content-between">
+                        <section class="img-notif-customer-affairs">
+                            {% if notification.image %}
+                                {% thumbnail notification.image "224x224" crop='center' quality=95 as im %}
+                                    <img src="{{ im.url }}" alt="notif{{ forloop.counter }}">
+                                {% endthumbnail %}
+                            {% else %}
+                                <img src="../../../static/images/notif.svg" alt="notif Customer Affairs">
+                            {% endif %}
+                        </section>
+                        <section class="text-notif-customer-affairs d-flex">
+                            <section>
+                                <h1>{{ notification.title }}</h1>
+                            </section>
+                            <p>{{ notification.text | safe }}</p>
+                        </section>
+                    </section>
+                {% endfor %}
+
+            </section>
+        </section>
+    </section>
+{% endblock %}

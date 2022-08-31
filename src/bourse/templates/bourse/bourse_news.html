@@ -1,0 +1,109 @@
+{% extends 'shared/_layout.html' %}
+{% load thumbnail %}
+{% block title %}اخبار بورس ایران{% endblock %}
+{% block content %}
+    <section class="se-pre-con"></section>
+    <section class="bourse-content">
+        <section class="header-of-news-content">
+            <h3>اخبار بورس ایران</h3>
+        </section>
+        <section class="slider-container">
+            <section class="slider d-flex">
+                <section id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+                    <section class="carousel-inner">
+                        {% for slider_item in slider_data %}
+                            <section class="carousel-item {% if forloop.first %} active {% endif %}">
+                                <a target="_blank" href="https://www.sena.ir/{{ slider_item.url_news }}">
+                                    <img src="{{ slider_item.img_news }}" alt="News1">
+                                    <section class="carousel-caption">
+                                        <p>{{ slider_item.title_news }}</p>
+                                    </section>
+                                </a>
+                            </section>
+                        {% endfor %}
+
+                    </section>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="">
+                            <i class="fa fa-angle-left"></i>
+                        </span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="">
+                            <i class="fa fa-angle-right"></i>
+                        </span>
+                    </a>
+                </section>
+                <section class="important-news mr-4">
+                    {% for left_data in extra_slider_data %}
+                        <section>
+                            <a target="_blank" href="https://www.sena.ir/{{ left_data.url_news }}">
+                                <img src="{{ left_data.img_news }}" alt="news">
+                                <section class="info-news">
+                                    <p>{{ left_data.title_news }}</p>
+                                </section>
+                            </a>
+                        </section>
+                    {% endfor %}
+                </section>
+            </section>
+        </section>
+        <section class="more-news-brs d-flex">
+            <section class="right-news">
+                <a target="_blank" href="https://www.sena.ir/{{ right_news_data.url_news }}">
+                    <img src="{{ right_news_data.img_news }}" alt="news">
+                    <section>
+                        <p>{{ right_news_data.title_news }}</p>
+                    </section>
+                </a>
+            </section>
+            <section class="left-news">
+                {% for data in left_news_data %}
+                    <section>
+                        <img src="{{ data.img_news }}" alt="news">
+                        <a target="_blank" href="https://www.sena.ir/{{ data.url_news }}">
+                            <section class="left-news-info">
+                                <p>{{ data.title_news }}</p>
+                            </section>
+                        </a>
+                    </section>
+                {% endfor %}
+
+            </section>
+        </section>
+        <section class="body-news-brs">
+            <section>
+                <section>
+                    <h3>آخرین اخبار</h3>
+                </section>
+                <section class="news-list-brs d-flex justify-content-between">
+                    <section>
+                        <ul>
+                            {% for last1 in last_news_data1 %}
+                                <li><a target="_blank"
+                                       href="https://www.sena.ir/{{ last1.url_news }}">{{ last1.title_news }} </a><i
+                                        class="fa fa-angle-double-left"></i></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section>
+                        <ul>
+                            {% for last2 in last_news_data2 %}
+                                <li><a target="_blank"
+                                       href="https://www.sena.ir/{{ last2.url_news }}">{{ last2.title_news }} </a><i
+                                        class="fa fa-angle-double-left"></i></li>
+                            {% endfor %}
+
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+{% endblock %}

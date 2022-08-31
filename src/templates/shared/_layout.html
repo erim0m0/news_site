@@ -1,0 +1,20 @@
+{% load render_partial %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% include 'shared/header_references.html' %}
+    <link rel="icon" href="../../static/images/Arka.jpg" type="image/icon type">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+{% render_partial 'home.views.site_header_component' %}
+{% block content %}{% endblock %}
+{% render_partial 'home.views.site_footer_component' %}
+{% include 'shared/footer_references.html' %}
+{% block footer_references %}{% endblock %}
+</body>
+</html>

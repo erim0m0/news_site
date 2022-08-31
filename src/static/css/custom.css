@@ -1,0 +1,930 @@
+@font-face {
+    font-family: IRANSans;
+    src: url('../fonts/IRANSans/IRANSansWeb_Light.woff') format('woff');
+}
+
+* {
+    font-family: IRANSans, serif;
+    margin: 0;
+}
+
+/* width Scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track Scroll */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px black;
+    border-radius: 0;
+}
+
+/* Handle Scroll */
+::-webkit-scrollbar-thumb {
+    background: rgb(5, 5, 3);
+    border-radius: 3px;
+}
+
+body {
+    /* background-color: #050501d3; */
+    background-color: #f2f4f5;
+    /* background-image: linear-gradient(to bottom, #b6c417, #af801a, #864927, #482422, #000000); */
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1250px) {
+}
+
+@media only screen and (max-width: 1199px) {
+    .another-news-crypto-body {
+        flex-direction: column;
+    }
+
+    .another-news-crypto-body > section {
+        margin: 0 0 20px 0;
+        width: 100% !important;
+    }
+
+    .body-news-crypto {
+        width: 85%;
+    }
+
+    .body-news-crypto img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .left-news-info p {
+        font-size: 13px;
+    }
+
+    .info-news {
+        top: 142px;
+    }
+
+    .carousel-inner img {
+        width: 490px;
+        height: 350px;
+    }
+
+    .important-news img {
+        width: 390px;
+        height: 176px;
+        margin-top: 8px;
+    }
+
+    .carousel-indicators {
+        top: 323px;
+    }
+
+    .table-two-brs {
+        display: table;
+    }
+
+    .table-one-brs {
+        display: none;
+    }
+
+    .table-two-brs td:nth-child(3n+1) {
+        background-color: #808080a6;
+    }
+
+    .table-two-brs td:nth-child(2n) {
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .table-two-brs td:nth-child(2n):hover {
+        background-color: rgba(240, 185, 11, 0.09);
+    }
+
+    .table-of-header-brs {
+        width: 60%;
+    }
+
+    .main-body {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .sidebar {
+        margin: 0;
+        flex: 0;
+        width: 70%;
+    }
+
+    .table-of-price {
+        background-color: #e2e2e200;
+    }
+
+    .table-of-price table {
+        background-color: #e2e2e245;
+        border-radius: 10px;
+    }
+
+    .table-of-price td {
+        padding: 10px 0;
+    }
+
+    .news-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .table-of-crypto th, td {
+        padding: 20px 15px;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 1056px) {
+    .cover {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .carousel-inner img {
+        width: 370px;
+        height: 280px;
+    }
+
+    .important-news img {
+        width: 311px;
+        height: 123px;
+        margin-top: 22px;
+    }
+
+    .carousel-indicators {
+        top: 257px;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        top: 3px;
+    }
+
+    .info-news {
+        top: 110px;
+    }
+
+    .info-news h3 {
+        font-size: 20px;
+    }
+
+    .info-news p {
+        font-size: 9px;
+    }
+
+    .slider-container {
+        height: 367px;
+    }
+
+    .table-of-crypto th, td {
+        font-size: 10px;
+    }
+
+    .table-of-crypto th, td {
+        padding: 20px 13px;
+    }
+
+    .price-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .chart {
+        width: 90px;
+        height: 29px;
+    }
+}
+
+@media only screen and (max-width: 900.98px) {
+    .body-news-crypto a {
+        flex-direction: column;
+    }
+
+    .body-news-crypto img {
+        margin: auto;
+    }
+
+    .body-table table td {
+        padding: 17px 12px !important;
+    }
+
+    .more-news-brs {
+        flex-direction: column;
+    }
+
+    .more-news-brs .right-news {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .cover {
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 780.98px) {
+    .body-news-crypto {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .crypto-news-body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .body-table table td:nth-child(7n), th:nth-child(7n) {
+        display: none;
+    }
+
+    .body-table table td:nth-child(6n), th:nth-child(6n) {
+        display: none;
+    }
+
+
+    #volumes {
+        display: table-cell;
+    }
+
+    #last-7-d {
+        display: table-cell;
+    }
+
+    .info-news {
+        top: 98px;
+    }
+
+    .reason-ans i {
+        font-size: 77px;
+    }
+
+    .reason-ans h5 {
+        font-size: 1rem;
+    }
+
+    .reason-ans p {
+        font-size: 15px;
+    }
+
+    .name-of-site h3 {
+        font-weight: 800;
+    }
+
+    .right-news {
+        text-align: center;
+    }
+
+    .right-news img {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .more-news-brs {
+        flex-direction: column;
+    }
+
+    .important-news img:nth-child(1) {
+        margin-right: 5px;
+    }
+
+    .slider-container {
+        height: 490px;
+    }
+
+    .important-news {
+        display: flex;
+        width: 100%;
+    }
+
+    .important-news img {
+        width: 231px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .slider {
+        display: block !important;
+    }
+
+    .h-title {
+        margin-right: 18px;
+    }
+
+    .header a {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+    .price-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .table-of-crypto th, td {
+        padding: 20px 8px;
+    }
+
+}
+
+@media only screen and (max-width: 700.98px) {
+    .total-of-market-container > section {
+        margin: 0 5px;
+    }
+
+    .total-of-market h2 {
+        font-size: 21px;
+    }
+
+    .right-footer {
+        margin-right: 17px;
+    }
+
+    .table-of-price th {
+        padding: 10px 38px;
+    }
+
+    .body-table {
+        width: 96% !important;
+    }
+
+    .login-form h2 {
+        font-size: 20px !important;
+    }
+
+    .login-form input {
+        font-size: 11px !important;
+    }
+
+}
+
+@media only screen and (max-width: 622px) {
+    #last-7-d {
+        display: none;
+    }
+
+    #coin-chart {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .forex-null {
+        top: 251px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .info-news {
+        top: 235px;
+    }
+
+    .forex-null {
+        top: 313px;
+    }
+
+    .social-icons i {
+        font-size: 24px;
+    }
+
+    .reason-qs {
+        flex-direction: column;
+    }
+
+    .reason-ans i {
+        font-size: 100px;
+    }
+
+    .table-of-price tr th:nth-child(1) {
+        display: none;
+    }
+
+    .table-of-price tr td:nth-child(1) {
+        display: none;
+    }
+
+    .news-container {
+        flex-direction: column;
+    }
+
+    .market-news img {
+        width: 170px;
+        height: 124px;
+    }
+
+    .body-news-crypto img {
+        width: 300px;
+        height: 250px;
+    }
+
+    .news-list-brs {
+        flex-direction: column;
+    }
+
+    .left-news-info h3 {
+        font-size: 16px;
+    }
+
+    .left-news-info p {
+        font-size: 14px;
+    }
+
+    .slider-container {
+        height: 650px;
+    }
+
+    .important-news img:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .important-news img {
+        width: 100%;
+    }
+
+    .important-news {
+        display: block;
+    }
+
+    .slider {
+        width: 357px;
+    }
+
+    .table-of-header-brs {
+        width: 85%;
+    }
+
+    .h-title {
+        margin-right: 18px;
+        font-size: 15px;
+    }
+
+    .header a {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .name-of-site {
+        padding: 45px !important;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .header-of-body {
+        padding: 34px 40px 48px 40px;
+    }
+
+    .header-of-body h2 {
+        font-size: 6vw;
+    }
+
+    .name-price p:nth-child(3) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 494.98px) {
+    .left-news img {
+        width: 123px;
+        height: 87px;
+    }
+
+    .more-news-brs .right-news p {
+        font-size: 12px;
+    }
+
+    .forex-null {
+        top: 160px;
+    }
+
+    .forex-null h6 {
+        font-size: 1rem;
+    }
+
+    .ownership p {
+        font-size: 10px;
+    }
+
+    .social-networks h3 {
+        font-size: 13px;
+    }
+
+    .social-networks {
+        width: 90%;
+    }
+
+    .table-of-footer {
+        width: 95%;
+    }
+
+    #instant-prices {
+        display: none;
+    }
+
+    #instant-news {
+        display: none;
+    }
+
+    .left-header {
+        display: none;
+    }
+
+    .header-icon {
+        display: flex;
+    }
+
+    .table-of-header-brs {
+        width: 96%;
+    }
+
+    .header {
+        display: none;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 30px;
+    }
+
+    .right-header ul {
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .h-title {
+        margin-right: 0;
+    }
+
+    .support-admin {
+        padding: 0 14px;
+    }
+
+    .main-body {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .header a {
+        font-size: 18px;
+    }
+
+    .name-of-site h3 b {
+        font-size: 19px !important;
+    }
+
+
+    .name-of-site h3 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        width: 90%;
+    }
+
+    .most-visited-news h4 {
+        font-size: 20px;
+    }
+
+    .news-body {
+        width: 100%;
+    }
+
+    .news-body h1 {
+        font-size: 18px;
+    }
+
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .market-news img {
+        width: 155px;
+        height: 120px;
+    }
+
+    .market-news p {
+        font-size: 15px;
+    }
+
+    .more-news a {
+        font-size: 10px;
+    }
+
+    .table-of-price td {
+        font-size: 14px;
+        padding: 10px 7px;
+    }
+
+    .table-of-price th {
+        padding: 10px 31px;
+        font-size: 14px;
+    }
+
+    .why-arka {
+        margin: 0;
+    }
+
+    .reason-qs {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .top-footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-footer {
+        margin-right: 0;
+    }
+
+    .table-of-footer .title {
+        font-size: 17px !important;
+    }
+
+    .table-of-footer li:nth-child(n+2) {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        margin-bottom: 0;
+        justify-content: center;
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .ownership {
+        margin-top: 0;
+    }
+
+    .notif-container {
+        display: block;
+    }
+
+    .body-admin {
+        width: 100%;
+    }
+
+    .body-admin > section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sidebar-admin {
+        width: 100%;
+    }
+
+    .sidebar-admin > section {
+        margin: 0;
+        border-top: 1px solid #f2f4f53b;
+    }
+
+    .form-notification > section {
+        flex-direction: column-reverse;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .form-notification input {
+        width: 100%;
+    }
+
+    .form-notification textarea {
+        width: 100%;
+    }
+
+    .form-notification label {
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 441.98px) {
+    #volumes {
+        display: none;
+    }
+
+    .volume {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 411.98px) {
+    .forex-null {
+        top: 208px;
+    }
+}
+
+@media only screen and (max-width: 373px) {
+    .market-cap {
+        display: none;
+    }
+
+    #market-cap {
+        display: none;
+    }
+
+    .forex-null {
+        height: 145px;
+    }
+
+    .left-news > section {
+        flex-direction: column;
+        text-align: center;
+        margin: auto auto 10px auto;
+    }
+
+    .left-news-info {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    .forex-null {
+        height: 225px;
+    }
+
+    .forex-null h6 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    .forex-null {
+        top: 310px;
+    }
+}
+
+@media only screen and (max-width: 302px) {
+    .body-news-crypto img {
+        width: 157px;
+        height: 111px;
+    }
+
+    .body-news-crypto h6 {
+        font-size: 17px;
+    }
+
+    .body-news-crypto p {
+        font-size: 11px;
+    }
+
+    .datetime-crypto {
+        font-size: 8px;
+    }
+
+    .another-news-crypto-body section h6 {
+        font-size: 16px;
+    }
+
+    .another-news-crypto-body section p {
+        font-size: 11px;
+    }
+
+    .another-news-crypto-body > section {
+        margin-left: 0;
+    }
+
+    .another-news-crypto-body {
+        width: 93%;
+    }
+}
+
+@media only screen and (max-width: 408.98px) {
+    .crypto-news-body > section:nth-child(2) section {
+        width: 100%;
+    }
+
+    .another-news-crypto-body section img {
+        width: 100%;
+    }
+
+    .table-of-price th {
+        padding: 10px 17px;
+        font-size: 12px;
+    }
+
+    .table-of-price td {
+        font-size: 9px;
+    }
+
+
+    .body-news-crypto img {
+        width: 100%;
+        height: 150px;
+    }
+
+    .right-news img {
+        height: 238px;
+    }
+
+    .left-news-info h3 {
+        font-size: 12px;
+    }
+
+    .left-news-info p {
+        font-size: 10px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 13px;
+    }
+
+    .carousel-caption p {
+        font-size: 10px;
+    }
+
+    .carousel-indicators {
+        top: 184px;
+    }
+
+    .slider {
+        width: 260px;
+    }
+
+    .carousel-inner img {
+        height: 216px;
+    }
+}
+
+@media only screen and (max-width: 362.98px) {
+    .body-table table td {
+        padding: 17px 0 !important;
+    }
+}
+
+@media only screen and (max-width: 304px) {
+    .forex-null {
+        top: 250px;
+    }
+}
+
+@media only screen and (max-width: 264px) {
+    #seven-days {
+        display: none;
+    }
+
+    .seven-days {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 241px) {
+    .forex-null {
+        height: 202px;
+    }
+}
+
+@media only screen and (max-width: 241px) {
+    .table-of-crypto {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 232px)  {
+    .forex-null {
+        height: 207px;
+        top: 268px;
+    }
+}
+

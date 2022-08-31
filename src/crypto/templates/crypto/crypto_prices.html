@@ -1,0 +1,639 @@
+{% extends 'shared/_layout.html' %}
+{% block title %}
+    قیمت رمزارزها
+{% endblock %}
+{% block content %}
+    <section class="se-pre-con"></section>
+    <section class="main-body-prices-crypto">
+        <section class="header-of-body">
+            <section>
+                <h2>قیمت لحظه ای رمز ارزها</h2>
+                <p>همه قیمت ها را با <b>آرکا</b> یکجا ببینید</p>
+            </section>
+        </section>
+        <section class="content-of-body position-relative table-of-crypto">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>24h %</th>
+                    <th id="seven-days">7d %</th>
+                    <th id="market-cap">Market Cap</th>
+                    <th id="volumes">Volume(24h)</th>
+                    <th id="last-7-d">Chart(24h)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/BTC-icon.svg" alt="coin-img"/>
+                            <p>BTC</p>
+                            <p>Bitcoin</p>
+                        </section>
+                    </td>
+                    <td id="btc-price">$1000000</td>
+                    <td id="btc-24h">0.72%</td>
+                    <td id="btc-7d" class="seven-days">9.77%</td>
+                    <td id="btc-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="btc-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="btc-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/ethereum-eth-logo.svg" alt="coin-img"/>
+                            <p>ETH</p>
+                            <p>Ethereum</p>
+
+                        </section>
+                    </td>
+                    <td id="eth-price">$1000000</td>
+                    <td id="eth-24h">0.72%</td>
+                    <td id="eth-7d" class="seven-days">9.77%</td>
+                    <td id="eth-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="eth-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="eth-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/usdt.svg" alt="coin-img"/>
+                            <p>USDT</p>
+                            <p>Tether</p>
+                        </section>
+                    </td>
+                    <td id="usdt-price">$1000000</td>
+                    <td id="usdt-24h">0.72%</td>
+                    <td id="usdt-7d" class="seven-days">9.77%</td>
+                    <td id="usdt-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="usdt-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="usdt-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/USDC.svg" alt="coin-img"/>
+                            <p>USDC</p>
+                            <p>USD Coin</p>
+
+                        </section>
+                    </td>
+                    <td id="usdc-price">$1000000</td>
+                    <td id="usdc-24h">0.72%</td>
+                    <td id="usdc-7d" class="seven-days">9.77%</td>
+                    <td id="usdc-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="usdc-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="usdc-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/BNB.svg" alt="cion-img"/>
+                            <p>BNB</p>
+                            <p>BNB</p>
+                        </section>
+                    </td>
+                    <td id="bnb-price">$1000000</td>
+                    <td id="bnb-24h">0.72%</td>
+                    <td id="bnb-7d" class="seven-days">9.77%</td>
+                    <td id="bnb-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="bnb-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="bnb-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/XRP.svg" alt="coin-img"/>
+                            <p>XRP</p>
+                            <p>XRP</p>
+                        </section>
+                    </td>
+                    <td id="xrp-price">$1000000</td>
+                    <td id="xrp-24h">0.72%</td>
+                    <td id="xrp-7d" class="seven-days">9.77%</td>
+                    <td id="xrp-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="xrp-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="xrp-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/BUSD.svg" alt="coin-img"/>
+                            <p>BUSD</p>
+                            <p>Binance USD</p>
+
+                        </section>
+                    </td>
+                    <td id="busd-price">$1000000</td>
+                    <td id="busd-24h">0.72%</td>
+                    <td id="busd-7d" class="seven-days">9.77%</td>
+                    <td id="busd-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="busd-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="busd-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/SOL.svg" alt="coin-img"/>
+                            <p>SOL</p>
+                            <p>Solana</p>
+
+                        </section>
+                    </td>
+                    <td id="sol-price">$1000000</td>
+                    <td id="sol-24h">0.72%</td>
+                    <td id="sol-7d" class="seven-days">9.77%</td>
+                    <td id="sol-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="sol-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="sol-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/ADA.svg" alt="coin-img"/>
+                            <p>ADA</p>
+                            <p>Cardano</p>
+
+                        </section>
+                    </td>
+                    <td id="ada-price">$1000000</td>
+                    <td id="ada-24h">0.72%</td>
+                    <td id="ada-7d" class="seven-days">9.77%</td>
+                    <td id="ada-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="ada-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="ada-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/AVAX.svg" alt="coin-img"/>
+                            <p>AVAX</p>
+                            <p>Avalanche</p>
+
+                        </section>
+                    </td>
+                    <td id="avax-price">$1000000</td>
+                    <td id="avax-24h">0.72%</td>
+                    <td id="avax-7d" class="seven-days">9.77%</td>
+                    <td id="avax-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="avax-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="avax-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/DOT.svg" alt="coin-img"/>
+                            <p>DOT</p>
+                            <p>Polkadot</p>
+
+                        </section>
+                    </td>
+                    <td id="dot-price">$1000000</td>
+                    <td id="dot-24h">0.72%</td>
+                    <td id="dot-7d" class="seven-days">9.77%</td>
+                    <td id="dot-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="dot-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="dot-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/DOGE.svg" alt="coin-img"/>
+                            <p>DOGE</p>
+                            <p>Dogecoin</p>
+
+                        </section>
+                    </td>
+                    <td id="doge-price">$1000000</td>
+                    <td id="doge-24h">0.72%</td>
+                    <td id="doge-7d" class="seven-days">9.77%</td>
+                    <td id="doge-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="doge-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="doge-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/FTT.svg" alt="coin-img"/>
+                            <p>FTT</p>
+                            <p>FTX Token</p>
+
+                        </section>
+                    </td>
+                    <td id="ftt-price">$1000000</td>
+                    <td id="ftt-24h">0.72%</td>
+                    <td id="ftt-7d" class="seven-days">9.77%</td>
+                    <td id="ftt-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="ftt-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="ftt-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/MATIC.svg" alt="coin-img"/>
+                            <p>MATIC</p>
+                            <p>Polygon</p>
+
+                        </section>
+                    </td>
+                    <td id="matic-price">$1000000</td>
+                    <td id="matic-24h">0.72%</td>
+                    <td id="matic-7d" class="seven-days">9.77%</td>
+                    <td id="matic-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="matic-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="matic-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/SHIB.svg" alt="coin-img"/>
+                            <p>SHIB</p>
+                            <p>Shiba Inu</p>
+
+                        </section>
+                    </td>
+                    <td id="shib-price">$1000000</td>
+                    <td id="shib-24h">0.72%</td>
+                    <td id="shib-7d" class="seven-days">9.77%</td>
+                    <td id="shib-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="shib-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="shib-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/LINK.svg" alt="coin-img"/>
+                            <p>LINK</p>
+                            <p>Chainlink</p>
+
+                        </section>
+                    </td>
+                    <td id="link-price">$1000000</td>
+                    <td id="link-24h">0.72%</td>
+                    <td id="link-7d" class="seven-days">9.77%</td>
+                    <td id="link-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="link-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="link-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/UNI.svg" alt="coin-img"/>
+                            <p>UNI</p>
+                            <p>Uniswap</p>
+
+                        </section>
+                    </td>
+                    <td id="uni-price">$1000000</td>
+                    <td id="uni-24h">0.72%</td>
+                    <td id="uni-7d" class="seven-days">9.77%</td>
+                    <td id="uni-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="uni-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="uni-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/TRX.svg" alt="coin-img"/>
+                            <p>TRX</p>
+                            <p>TRON</p>
+
+                        </section>
+                    </td>
+                    <td id="trx-price">$1000000</td>
+                    <td id="trx-24h">0.72%</td>
+                    <td id="trx-7d" class="seven-days">9.77%</td>
+                    <td id="trx-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="trx-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="trx-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/DAI.svg" alt="coin-img"/>
+                            <p>DAI</p>
+                            <p>Dai</p>
+
+                        </section>
+                    </td>
+                    <td id="dai-price">$1000000</td>
+                    <td id="dai-24h">0.72%</td>
+                    <td id="dai-7d" class="seven-days">9.77%</td>
+                    <td id="dai-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="dai-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="dai-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/STETH.svg" alt="coin-img"/>
+                            <p>STETH</p>
+                            <p>Lido Staked ETH</p>
+
+                        </section>
+                    </td>
+                    <td id="steth-price">$1000000</td>
+                    <td id="steth-24h">0.72%</td>
+                    <td id="steth-7d" class="seven-days">9.77%</td>
+                    <td id="steth-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="steth-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="steth-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/XLM.svg" alt="coin-img"/>
+                            <p>XLM</p>
+                            <p>Stellar</p>
+
+                        </section>
+                    </td>
+                    <td id="xlm-price">$1000000</td>
+                    <td id="xlm-24h">0.72%</td>
+                    <td id="xlm-7d" class="seven-days">9.77%</td>
+                    <td id="xlm-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="xlm-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="xlm-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/WBTC.svg" alt="coin-img"/>
+                            <p>WBTC</p>
+                            <p>Wrapped Bitcoin</p>
+
+                        </section>
+                    </td>
+                    <td id="wbtc-price">$1000000</td>
+                    <td id="wbtc-24h">0.72%</td>
+                    <td id="wbtc-7d" class="seven-days">9.77%</td>
+                    <td id="wbtc-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="wbtc-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="wbtc-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/LEO.svg" alt="coin-img"/>
+                            <p>LEO</p>
+                            <p>UNUS SED LEO</p>
+
+                        </section>
+                    </td>
+                    <td id="leo-price">$1000000</td>
+                    <td id="leo-24h">0.72%</td>
+                    <td id="leo-7d" class="seven-days">9.77%</td>
+                    <td id="leo-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="leo-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="leo-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/ETC.svg" alt="coin-img"/>
+                            <p>ETC</p>
+                            <p>Ethereum Classic</p>
+
+                        </section>
+                    </td>
+                    <td id="etc-price">$1000000</td>
+                    <td id="etc-24h">0.72%</td>
+                    <td id="etc-7d" class="seven-days">9.77%</td>
+                    <td id="etc-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="etc-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="etc-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/OKB.svg" alt="coin-img"/>
+                            <p>OKB</p>
+                            <p>OKB</p>
+                        </section>
+                    </td>
+                    <td id="okb-price">$1000000</td>
+                    <td id="okb-24h">0.72%</td>
+                    <td id="okb-7d" class="seven-days">9.77%</td>
+                    <td id="okb-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="okb-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="okb-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/NEAR.svg" alt="coin-img"/>
+                            <p>NEAR</p>
+                            <p>NEAR Protocol</p>
+
+                        </section>
+                    </td>
+                    <td id="near-price">$1000000</td>
+                    <td id="near-24h">0.72%</td>
+                    <td id="near-7d" class="seven-days">9.77%</td>
+                    <td id="near-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="near-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="near-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/LTC.svg" alt="coin-img"/>
+                            <p>LTC</p>
+                            <p>Litecoin</p>
+
+                        </section>
+                    </td>
+                    <td id="ltc-price">$1000000</td>
+                    <td id="ltc-24h">0.72%</td>
+                    <td id="ltc-7d" class="seven-days">9.77%</td>
+                    <td id="ltc-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="ltc-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="ltc-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/QNT.svg" alt="coin-img"/>
+                            <p>QNT</p>
+                            <p>Quant</p>
+
+                        </section>
+                    </td>
+                    <td id="qnt-price">$1000000</td>
+                    <td id="qnt-24h">0.72%</td>
+                    <td id="qnt-7d" class="seven-days">9.77%</td>
+                    <td id="qnt-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="qnt-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="qnt-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/ATOM.svg" alt="coin-img"/>
+                            <p>ATOM</p>
+                            <p>Cosmos</p>
+
+                        </section>
+                    </td>
+                    <td id="atom-price">$1000000</td>
+                    <td id="atom-24h">0.72%</td>
+                    <td id="atom-7d" class="seven-days">9.77%</td>
+                    <td id="atom-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="atom-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="atom-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/CRO.svg" alt="coin-img"/>
+                            <p>CRO</p>
+                            <p>Cronos</p>
+
+                        </section>
+                    </td>
+                    <td id="cro-price">$1000000</td>
+                    <td id="cro-24h">0.72%</td>
+                    <td id="cro-7d" class="seven-days">9.77%</td>
+                    <td id="cro-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="cro-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="cro-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/ICP.svg" alt="coin-img"/>
+                            <p>ICP</p>
+                            <p>Internet Computer</p>
+
+                        </section>
+                    </td>
+                    <td id="icp-price">$1000000</td>
+                    <td id="icp-24h">0.72%</td>
+                    <td id="icp-7d" class="seven-days">9.77%</td>
+                    <td id="icp-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="icp-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="icp-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/KLAY.svg" alt="coin-img"/>
+                            <p>KLAY</p>
+                            <p>Klaytn</p>
+
+                        </section>
+                    </td>
+                    <td id="klay-price">$1000000</td>
+                    <td id="klay-24h">0.72%</td>
+                    <td id="klay-7d" class="seven-days">9.77%</td>
+                    <td id="klay-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="klay-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="klay-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/XMR.svg" alt="coin-img"/>
+                            <p>XMR</p>
+                            <p>Monero</p>
+
+                        </section>
+                    </td>
+                    <td id="xmr-price">$1000000</td>
+                    <td id="xmr-24h">0.72%</td>
+                    <td id="xmr-7d" class="seven-days">9.77%</td>
+                    <td id="xmr-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="xmr-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="xmr-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="name-price d-flex justify-content-start">
+                            <img class="price-icon" src="../../../static/images/coin_logo/BCH.svg" alt="coin-img"/>
+                            <p>BCH</p>
+                            <p>Bitcoin Cash</p>
+
+                        </section>
+                    </td>
+                    <td id="bch-price">$1000000</td>
+                    <td id="bch-24h">0.72%</td>
+                    <td id="bch-7d" class="seven-days">9.77%</td>
+                    <td id="bch-market-cap" class="market-cap">$333,333,333</td>
+                    <td id="bch-volume" class="volume">$111,111,111</td>
+                    <td id="coin-chart">
+                        <img id="bch-chart" class="chart" src="../../../static/images/chart-img.svg" alt="WeekChart"/>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </section>
+{% endblock %}
+
+{% block footer_references %}
+    <script src="../../../static/js/WebS.js"></script>
+{% endblock %}

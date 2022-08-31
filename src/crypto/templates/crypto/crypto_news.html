@@ -1,0 +1,26 @@
+{% extends 'shared/_layout.html' %}
+{% block title %}
+    اخبار کریپتو
+{% endblock %}
+{% block content %}
+    <section class="se-pre-con"></section>
+    <section class="header-of-news-content">
+        <h3>Crypto News</h3>
+    </section>
+    <section class="crypto-news-body d-flex">
+        {% for crypto_item in crypto_news %}
+            <section class="body-news-crypto">
+                <a target="_blank" href="https://www.coindesk.com{{ main_crypto_news.url_news }}">
+                    <img src="{{ crypto_item.img_news }}" alt="Crypto News">
+                    <section>
+                        <h6>{{ crypto_item.title_news }}</h6>
+                        {% if crypto_item.text != 'null' %}
+                            <p>{{ crypto_item.text }}</p>
+                        {% endif %}
+                        <p class="datetime-crypto">{{ crypto_item.datetime }}</p>
+                    </section>
+                </a>
+            </section>
+        {% endfor %}
+    </section>
+{% endblock %}

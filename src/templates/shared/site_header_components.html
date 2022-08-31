@@ -1,0 +1,76 @@
+<header>
+    <section class="zoom-img-of-arka">
+        <img src="../../static/images/Arka.jpg" alt="Arka">
+    </section>
+    <section class="header justify-content-between" id="header">
+
+        <section class="left-header position-relative">
+            <a class="pointer support"><i class="fa fa-phone mr-2"></i>پشتیبانی</a>
+            <section>
+                <section id="menu-of-support" class="menu-of-support position-absolute">
+                    <section><i class="fa fa-phone"></i></section>
+                    <section>
+                        <h3>021-5555</h3>
+                        <section class="time-of-work d-flex">
+                            <p>روزهای کاری</p>
+                            <p>هشت صبح تا <br/>دوازده ظهر</p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="right-header">
+            <ul class="d-flex">
+                <li class="h-title pointer"><a href="#">سوالی دارید؟</a></li>
+                <li id="instant-prices" class="h-title pointer position-relative">
+                    <a><i class="fa fa-chevron-down arrow-icon"></i> قیمت لحظه ای</a>
+                    <section class="menu-of-instant-prices position-absolute">
+                        <ul>
+                            <li id="instant-price"><a href="{% url 'crypto_prices_page' %}">بازار کریپتو</a></li>
+                            <li id="instant-price"><a href="{% url 'forex_prices_page' %}">بازار فارکس</a></li>
+                            <li id="instant-price"><a href="{% url 'bourse_prices_page' %}">بازار بورس</a></li>
+                        </ul>
+                    </section>
+                </li>
+                <li id="instant-news" class="h-title pointer position-relative">
+                    <a><i class="fa fa-chevron-down arrow-icon"></i> خبرها</a>
+                    <section class="menu-of-instant-news position-absolute">
+                        <ul>
+                            <li id="instant-new">
+                                <a target="_blank" href="{% url 'crypto_news_page' %}">اخبار کریپتو</a>
+                            </li>
+                            <li id="instant-new">
+                                <a target="_blank" href="{% url 'forex_news_page' %}">اخبار فارکس</a>
+                            </li>
+                            <li id="instant-new">
+                                <a target="_blank" href="{% url 'bourse_news_page' %}">اخبار بورس</a>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li class="arka">آرکا</li>
+                <li>
+                    <img
+                            id="logo"
+                            class="pointer"
+                            src="../../static/images/Arka.jpg"
+                            alt="logo"
+                    />
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="admin">
+        <a href="#">
+            <section class="support-admin">
+                <section class="d-flex">
+                    <span><img class="support-img" src="../../static/images/support.svg" alt="Suported"/></span>
+                    <span><p>پشتیبانی</p></span>
+                </section>
+            </section>
+        </a>
+    </section>
+</header>
+<section id="header-icon" class="header-icon">
+    <i id="header-icon-i" class="fa fa-angle-double-down"></i>
+</section>
