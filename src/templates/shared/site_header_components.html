@@ -21,7 +21,7 @@
         </section>
         <section class="right-header">
             <ul class="d-flex">
-                <li class="h-title pointer"><a href="#">سوالی دارید؟</a></li>
+                <li class="h-title pointer"><a href="{% url 'contact_us_page' %}">سوالی دارید؟</a></li>
                 <li id="instant-prices" class="h-title pointer position-relative">
                     <a><i class="fa fa-chevron-down arrow-icon"></i> قیمت لحظه ای</a>
                     <section class="menu-of-instant-prices position-absolute">
@@ -37,13 +37,13 @@
                     <section class="menu-of-instant-news position-absolute">
                         <ul>
                             <li id="instant-new">
-                                <a target="_blank" href="{% url 'crypto_news_page' %}">اخبار کریپتو</a>
+                                <a  href="{% url 'crypto_news_page' %}">اخبار کریپتو</a>
                             </li>
                             <li id="instant-new">
-                                <a target="_blank" href="{% url 'forex_news_page' %}">اخبار فارکس</a>
+                                <a  href="{% url 'forex_news_page' %}">اخبار فارکس</a>
                             </li>
                             <li id="instant-new">
-                                <a target="_blank" href="{% url 'bourse_news_page' %}">اخبار بورس</a>
+                                <a  href="{% url 'bourse_news_page' %}">اخبار بورس</a>
                             </li>
                         </ul>
                     </section>

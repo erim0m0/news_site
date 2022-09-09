@@ -18,7 +18,7 @@ def send_request():
         content = BeautifulSoup(response.text, 'html.parser')
 
     except ScrapExceptions:
-        sleep(25)
+        sleep(30)
         send_request()
 
 
@@ -36,5 +36,4 @@ def get_news_data(*args):
                 }
             }
             data_list.append(datas_info)
-
 

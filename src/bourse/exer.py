@@ -1,12 +1,9 @@
-data = {
-    'success': True,
-    'timestamp': 1661614264,
-    'source': 'GBP',
-    'quotes': {'GBPUSD': 1.17495}
+a = {
+    'amir', 'ali'
 }
 
-a = data.get('quotes')
+b = {
+    'amir', 'aomomoli'
+}
 
-b = [k for i,k in data.items()]
-
-print(b)
+print(a.intersection(b))

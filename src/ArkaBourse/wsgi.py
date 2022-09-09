@@ -1,5 +1,5 @@
 """
-WSGI config for ArkaBourse project.
+WSGI ArkaBourse for ArkaBourse project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

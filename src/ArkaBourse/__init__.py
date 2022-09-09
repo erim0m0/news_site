@@ -1,1 +1,1 @@
-from .celery_conf import celery_app
+from ArkaBourse.celery import celery_app

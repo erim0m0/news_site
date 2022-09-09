@@ -52,7 +52,3 @@ def get_news_data(*args):
         }
 
         data_list.append(datas_info)
-send_request()
-get_news_data()
-for i in data_list:
-    print(i)

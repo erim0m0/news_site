@@ -6,7 +6,7 @@
         <h3>با <b>آرکا</b> از خبرهای تمام بازارهای مالی داخلی و خارجی باخبر باشید</h3>
     </section>
     <section class="bloomberg-address">
-        <a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a>
+        <a href="https://www.bloomberg.com/" >Bloomberg</a>
     </section>
     <section class="total-of-market">
         <canvas id="canvas" class=""></canvas>
@@ -49,7 +49,7 @@
 
                 </section>
                 <section class="more-news d-flex justify-content-end">
-                    <a target="_blank" href="{% url 'crypto_news_page' %}">< نمایش همه خبرها</a>
+                    <a  href="{% url 'crypto_news_page' %}">< نمایش همه خبرها</a>
                 </section>
             </section>
             <section>
@@ -66,7 +66,9 @@
                             <tr>
                                 <td>
                                     <section class="name-price d-flex justify-content-center">
-                                        <img class="price-icon" src="../../../static/images/BTC-icon.svg" alt="BTC">
+                                        <img class="price-icon"
+                                             src="../../../static/images/coin_logo/BTC-icon.svg"
+                                             alt="BTC">
                                         <p>BTC</p>
                                     </section>
                                 </td>
@@ -84,7 +86,8 @@
                                 <td>
                                     <section class="name-price d-flex justify-content-center">
                                         <img class="price-icon"
-                                             src="../../../static/images/coin_logo/ethereum-eth-logo.svg" alt="BTC">
+                                             src="../../../static/images/coin_logo/ethereum-eth-logo.svg"
+                                             alt="ETH">
                                         <p>ETH</p>
                                     </section>
                                 </td>
@@ -102,16 +105,14 @@
                                 <td>
                                     <section class="name-price d-flex justify-content-center">
                                         <img class="price-icon" src="../../../static/images/coin_logo/usdt.svg"
-                                             alt="BTC">
+                                             alt="USDT">
                                         <p>USDT</p>
                                     </section>
                                 </td>
                                 <td id="usdt-price">100000000</td>
                                 <td id="usdt-24h">2.84%</td>
                                 <td>
-                                    <img
-                                            id="usdt-chart"
-                                            class="chart"
+                                    <img id="usdt-chart" class="chart"
                                             src="../../../static/images/chart-img.svg"
                                             alt="WeekChart">
                                 </td>
@@ -137,7 +138,7 @@
                             </tr>
                             <tr>
                                 <td>EUR / USD</td>
-                                <td>{{ forex_prices1.price}}</td>
+                                <td>{{ forex_prices1.price }}</td>
                                 <td>GBP / USD</td>
                                 <td>{{ forex_prices2.price }}</td>
                             </tr>
@@ -170,7 +171,7 @@
 
                 </section>
                 <section class="more-news d-flex justify-content-end">
-                    <a target="_blank" href="{% url 'bourse_news_page' %}">< نمایش همه خبرها</a>
+                    <a href="{% url 'bourse_news_page' %}">< نمایش همه خبرها</a>
                 </section>
             </section>
             <section>

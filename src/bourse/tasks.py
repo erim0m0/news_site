@@ -4,7 +4,7 @@ from . import scrap_bourse
 
 
 @shared_task
-def add_notif():
+def add_bourse_news():
     scrap_bourse.send_request()
     scrap_bourse.get_news_data(
         'carousel1', 'box173',

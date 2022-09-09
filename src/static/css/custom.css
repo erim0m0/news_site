@@ -26,9 +26,7 @@
 }
 
 body {
-    /* background-color: #050501d3; */
     background-color: #f2f4f5;
-    /* background-image: linear-gradient(to bottom, #b6c417, #af801a, #864927, #482422, #000000); */
     box-sizing: border-box;
 }
 
@@ -164,12 +162,25 @@ a:hover {
 }
 
 @media only screen and (max-width: 1056px) {
+    .text-contact-customer-affairs section {
+        flex-direction: column-reverse;
+    }
+
+    .main-body-contact img {
+        width: 300px;
+        height: 234px;
+    }
+
     .cover {
         width: 55%;
     }
 }
 
 @media only screen and (max-width: 991.98px) {
+    .header-of-contact p {
+        font-size: 15px;
+    }
+
     .carousel-inner img {
         width: 370px;
         height: 280px;
@@ -253,6 +264,19 @@ a:hover {
 }
 
 @media only screen and (max-width: 780.98px) {
+    #contact-customer-affairs {
+        width: 272px !important;
+    }
+
+    .main-body-contact > section {
+        flex-direction: column;
+    }
+
+    .text-contact-customer-affairs section h4 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
     .body-news-crypto {
         width: 95%;
         margin-bottom: 10px;
@@ -517,6 +541,15 @@ a:hover {
 }
 
 @media only screen and (max-width: 494.98px) {
+    .main-body-contact img {
+        width: 200px;
+        height: 150px;
+    }
+
+    #contact-customer-affairs {
+        width: 150px !important;
+    }
+
     .left-news img {
         width: 123px;
         height: 87px;
@@ -921,7 +954,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 232px)  {
+@media only screen and (max-width: 232px) {
     .forex-null {
         height: 207px;
         top: 268px;
